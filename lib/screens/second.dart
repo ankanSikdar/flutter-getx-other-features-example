@@ -38,6 +38,12 @@ class Second extends StatelessWidget {
             },
             child: Text('Increase 2'),
           ),
+          SizedBox(height: 32.0),
+          ElevatedButton(
+              onPressed: () {
+                Get.toNamed('/third');
+              },
+              child: Text('Go To Third Screen'))
         ],
       ),
     );
