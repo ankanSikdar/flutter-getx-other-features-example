@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:other_features/controllers/bindings/sumBinding.dart';
 import 'package:other_features/screens/first.dart';
 import 'package:other_features/screens/second.dart';
 import 'package:other_features/utils/translations.dart';
@@ -24,7 +25,11 @@ class MyApp extends StatelessWidget {
       initialRoute: '/first',
       getPages: [
         GetPage(name: '/first', page: () => First()),
-        GetPage(name: '/second', page: () => Second()),
+        GetPage(
+          name: '/second',
+          page: () => Second(),
+          binding: SumBind(),
+        ),
       ],
     );
   }
