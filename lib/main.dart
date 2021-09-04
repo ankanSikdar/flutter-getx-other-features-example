@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:other_features/screens/first.dart';
 import 'package:other_features/screens/second.dart';
+import 'package:other_features/utils/translations.dart';
 
 void main() {
   runApp(MyApp());
@@ -16,6 +17,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
+      translations: MyTranslations(),
+      locale: Locale('en', 'US'),
       // Set Default Transition for changing screens
       defaultTransition: Transition.leftToRightWithFade,
       initialRoute: '/first',
