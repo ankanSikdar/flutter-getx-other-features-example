@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:other_features/controllers/bindings/sumBinding.dart';
 import 'package:other_features/screens/first.dart';
 import 'package:other_features/screens/second.dart';
 import 'package:other_features/screens/third.dart';
 import 'package:other_features/utils/translations.dart';
 
-void main() {
+void main() async {
+  await GetStorage.init();
+
   runApp(MyApp());
 }
 

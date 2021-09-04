@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:other_features/controllers/sumController.dart';
 
 class Second extends StatelessWidget {
@@ -37,6 +38,14 @@ class Second extends StatelessWidget {
               sumController.increment2();
             },
             child: Text('Increase 2'),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              GetStorage box = GetStorage();
+              box.write('count1', sumController.count1.value);
+              box.write('count2', sumController.count2.value);
+            },
+            child: Text('Store Values'),
           ),
           SizedBox(height: 32.0),
           ElevatedButton(
